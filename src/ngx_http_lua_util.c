@@ -37,6 +37,7 @@
 #include "ngx_http_lua_socket_tcp.h"
 #include "ngx_http_lua_socket_udp.h"
 #include "ngx_http_lua_sleep.h"
+#include "ngx_http_lua_sem.h"
 #include "ngx_http_lua_setby.h"
 #include "ngx_http_lua_headerfilterby.h"
 #include "ngx_http_lua_bodyfilterby.h"
@@ -796,6 +797,7 @@ ngx_http_lua_inject_ngx_api(lua_State *L, ngx_http_lua_main_conf_t *lmcf,
     ngx_http_lua_inject_control_api(log, L);
     ngx_http_lua_inject_subrequest_api(L);
     ngx_http_lua_inject_sleep_api(L);
+    ngx_http_lua_inject_sem_api(L);
     ngx_http_lua_inject_phase_api(L);
 
 #if (NGX_PCRE)

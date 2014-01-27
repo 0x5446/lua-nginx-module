@@ -276,7 +276,7 @@ struct ngx_http_lua_co_ctx_s {
     unsigned                 pending_subreqs; /* number of subrequests being
                                                  waited */
 
-    ngx_event_t              sleep;  /* used for ngx.sleep */
+    ngx_event_t              sleep;  /* used for ngx.sleep, ngx.sem_wait */
 
     int                      co_ref; /*  reference to anchor the thread
                                          coroutines (entry coroutine and user
